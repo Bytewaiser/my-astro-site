@@ -1,0 +1,20 @@
+---
+export interface Props {
+	children: string;
+	title: string;
+	href: string;
+}
+
+const { title, href } = Astro.props as Props;
+---
+
+<li>
+	<a
+		href={href}
+		target="_blank"
+		rel="noopener noreferrer"
+		class="inline-block cactus-link"
+		>{title}
+	</a>:
+	<p class="inline-block sm:mt-2"><slot/></p>
+</li>

@@ -1,12 +1,15 @@
 ---
 import PageLayout from "@/layouts/Base";
 import BlogPostPreview from "@/components/BlogPostPreview";
+import TechItem from "@/components/TechItem";
 import SocialList from "@/components/SocialList";
+import { Image } from "@astrojs/image/components";
 import { sortMDByDate } from "@/util";
 import type { Post } from "@/types";
+import profileImg from "../assets/Profile.jpg";
 
 const meta = {
-	title: "Astro Cactus",
+	title: "Home",
 	description: "The perfect starter for your perfect blog.",
 };
 
@@ -17,13 +20,31 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
 <PageLayout meta={meta}>
 	<section>
-		<h1 class="mb-6 title">Hello World!</h1>
-		<p class="mb-4">
-			Hi, I’m a theme for Astro, an example of how you can use this starter to
-			create a personal blog. If you want to know more about how you can
-			customise me, add more posts, and make it your own, click on one of the
-			social links which will take you to my repo.
-		</p>
+		<div>
+			<Image
+				src={profileImg}
+				alt="Hasan Hüseyin's Profile Picture"
+				width={125}
+				height={125}
+				class="rounded-lg max-w-none float-left mr-4"
+			/>
+			<h1 class="mb-2 title">Hello! I'm Hasan</h1>
+			<p class="mb-2">
+				I am a data scientist, consultant, and freelance developer based in
+				Turkey. My main passion is to learn about new technologies, mathematics,
+				blockchain, and finance. I am currently working at <a
+					href="https://www.uni-yaz.com/"
+					target="_blank"
+					class="cactus-link"
+				>
+					Universal Software</a
+				> as Research Scientist and
+				<a href="https://oxyai.com/" target="_blank" class="cactus-link"
+					>OxyAI</a
+				> as Senior Machine Learning Engineer while giving consultancies to R&D Centers
+				in Turkey.
+			</p>
+		</div>
 		<SocialList />
 	</section>
 	<section aria-label="Blog post list" class="mt-16">
@@ -41,50 +62,30 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 	<section class="mt-16">
 		<h2 class="mb-4 text-xl title">Technologies</h2>
 		<ul class="space-y-4 sm:space-y-2">
-			<li>
-				<a
-					href="https://astro.build"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="inline-block cactus-link"
-					>Astro
-				</a>:
-				<p class="inline-block sm:mt-2">Build fast websites, faster.</p>
-			</li>
-			<li>
-				<a
-					href="https://docs.astro.build/en/guides/integrations-guide/image/"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="inline-block cactus-link"
-					>@astro/image
-				</a>:
-				<p class="inline-block sm:mt-2">
-					An Astro integration for optimising images in Astro projects.
-				</p>
-			</li>
-			<li>
-				<a
-					href="https://tailwindcss.com"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="inline-block cactus-link"
-					>Tailwind CSS
-				</a>:
-				<p class="inline-block sm:mt-2">
-					Rapidly build modern websites without ever leaving your HTML.
-				</p>
-			</li>
-			<li>
-				<a
-					href="https://mdxjs.com/"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="inline-block cactus-link"
-					>MDX
-				</a>:
-				<p class="inline-block sm:mt-2">Markdown for the component era.</p>
-			</li>
+			<TechItem title="Python" href="https://www.python.org"
+				>Main programming language</TechItem
+			>
+			<TechItem title="Numpy" href="https://numpy.org/"
+				>Main tool for scientific computing</TechItem
+			>
+			<TechItem title="Pandas" href="https://pandas.pydata.org/">
+				Main tool for data manipulation (All the data stuff actually)
+			</TechItem>
+			<TechItem title="ScikitLearn" href="https://scikit-learn.org/stable/">
+				Machine Learning framework for general usage
+			</TechItem>
+			<TechItem title="Tensorflow" href="https://www.tensorflow.org/">
+				Deep Learning framework for industry projects
+			</TechItem>
+			<TechItem title="Pytorch" href="https://pytorch.org/">
+				Deep Learning framework for personal projects
+			</TechItem>
+			<TechItem title="Rust" href="https://www.rust-lang.org/">
+				Hobby language (Still in the learning stage)
+			</TechItem>
+			<TechItem title="Linux" href="https://www.linux.org/">
+				Favorite operating system (Far superior than others - I use Arch BTW!)
+			</TechItem>
 		</ul>
 	</section>
 </PageLayout>
