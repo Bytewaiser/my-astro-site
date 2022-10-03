@@ -4,6 +4,7 @@ title: Testing testing 123!
 publishDate: 13 May 2022
 description: Hello world!!! This is an example blog post showcasing some of the cool stuff Astro Cactus theme can do.
 tags: ["example", "blog", "cool"]
+math: true
 ---
 
 import { Image } from "@astrojs/image/components";
@@ -27,6 +28,7 @@ Here we have a simple js code block.
 let string = "JavaScript syntax highlighting";
 ```
 
+
 This is styled by Shiki, set via the [config](https://docs.astro.build/en/guides/markdown-content/#syntax-highlighting) for Astro.
 
 You can choose your own theme from this [library](https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-themes), which is currently set to Dracula, in the file `astro.config.mjs`.
@@ -34,6 +36,7 @@ You can choose your own theme from this [library](https://github.com/shikijs/shi
 Here is a horizontal rule.
 
 ---
+
 
 Here is a list:
 
@@ -50,9 +53,19 @@ And an ordered list:
 Here is a table:
 
 | Item         | Price | # In stock |
-| ------------ | :---: | ---------: |
+| ------------ | ----- | ---------- |
 | Juicy Apples | 1.99  |        739 |
 | Bananas      | 1.89  |          6 |
+
+$$
+x = \sqrt 1
+$$
+
+$
+x = \sqrt 2
+$
+
+$x = \sqrt 3$
 
 ## Tailwind CSS Prose styling
 

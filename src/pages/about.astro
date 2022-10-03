@@ -1,7 +1,7 @@
 ---
 import PageLayout from "@/layouts/Base";
 import { Image } from "@astrojs/image/components";
-import BlogPostPreview from "@/components/BlogPostPreview";
+import TimelineItem from "@/components/TimelineItem";
 import aboutImg from "../assets/Profile.jpg";
 
 const meta = {
@@ -16,17 +16,100 @@ const meta = {
 		<section aria-label="Blog post list" class="mt-16">
 			<h2 class="mb-4 text-xl title">Timeline</h2>
 			<ul class="space-y-4 sm:space-y-2">
-				<li class="flex flex-wrap items-center gap-x-2 [&_q]:w-full">
-					<time class="min-w-[120px] text-gray-500">2022-05</time>
-					<div>
-						<a href="asd" class="inline-block cactus-link ">
-							Datakod
-						</a> - R&D Center Consultant
-					</div>
-				</li>
+				<TimelineItem
+					time="2022-01"
+					title="Datakod"
+					position="R&D Center Consultant"
+					href="https://www.datakod.com/"
+				/>
+				<TimelineItem
+					time="2022-01"
+					title="Kolaybi"
+					position="R&D Center Consultant"
+					href="https://www.kolaybi.com/"
+				/>
+				<TimelineItem
+					time="2022-01"
+					title="Nano Works"
+					position="R&D Center Consultant"
+					href="https://nano.eu.com/"
+				/>
+				<TimelineItem
+					time="2021-10"
+					title="Synapsis Technology"
+					position="Data Science Consultant"
+					href="https://synapsis.com.tr/"
+				/>
+				<TimelineItem
+					time="2021-09"
+					title="Unsped Customs Consultancy"
+					position="Lead Machine Learning Engineer"
+					href="https://ugm.com.tr"
+				/>
+				<TimelineItem
+					time="2021-09"
+					title="Hepsi Emlak"
+					position="R&D Center Consultant"
+					href="https://www.hepsiemlak.com/"
+				/>
+				<TimelineItem
+					time="2021-08"
+					title="Protel"
+					position="Data Science Consultant"
+					href="https://www.protel.com.tr/"
+				/>
+				<TimelineItem
+					time="2021-05"
+					title="OxyAI"
+					position="Lead Machine Learning Engineer"
+					href="http://www.oxyai.com"
+				/>
+				<TimelineItem
+					time="2021-04"
+					title="Universal Software"
+					position="Lead Research Scientist"
+					href="https://www.uni-yaz.com"
+				/>
+				<TimelineItem
+					time="2021-04"
+					title="Albert Solino"
+					position="R&D Center Consultant"
+					href="https://www.albertsolino.com/"
+				/>
+				<TimelineItem
+					time="2020-12"
+					title="Smartiks Software Inc."
+					position="Data Science Consultant"
+					href="https://www.smartiks.com.tr/"
+				/>
+				<TimelineItem
+					time="2020-08"
+					title="Technorot Automative Products Inc."
+					position="Data Science Consultant"
+					href="https://www.teknorot.com/"
+				/>
+				<TimelineItem
+					time="2020-08"
+					title="Sefamerve"
+					position="Data Science Consultant"
+					href="https://www.sefamerve.com/"
+				/>
+				<TimelineItem
+					time="2020-05"
+					title="Comdata Group"
+					position="R&D Center Consultant"
+					href="https://www.comdatagroup.com/"
+				/>
+				<TimelineItem
+					time="2020-05"
+					title="Gtech Technology"
+					position="Data Science Consultant"
+					href="https://www.gtech.com.tr/en/"
+				/>
 			</ul>
 		</section>
-        {/*
+		{
+			/*
 		<p>
 			Hi, I’m a starter Astro. I’m particularly great for getting you started
 			with your own blogging website.
@@ -59,6 +142,7 @@ const meta = {
 				repo
 			</a> if you like me!
 		</p>
-        */}
+        */
+		}
 	</div>
 </PageLayout>

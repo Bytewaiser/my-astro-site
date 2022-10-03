@@ -1,8 +1,8 @@
 ---
-import type { IElement, MDXInstance, Post } from "@/types";
+import type { IElement, MarkdownInstance, Post } from "@/types";
 import { getLocaleTime } from "@/util";
 export interface Props extends IElement {
-	post: MDXInstance<Post>;
+	post: MarkdownInstance<Post>;
 	withDesc?: boolean;
 }
 

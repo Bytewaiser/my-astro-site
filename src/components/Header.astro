@@ -1,6 +1,5 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
-import Logo from "./Logo.astro";
 
 const url = new URL(Astro.request.url);
 ---
@@ -83,6 +82,7 @@ const url = new URL(Astro.request.url);
 			<a href="/posts" aria-current={url.pathname === "/posts" ? "page" : false}
 				>Blog
 			</a>
+			<a href="/Cv.pdf" target="_blank">Cv</a>
 		</nav>
 	</span>
 	<ThemeToggle />

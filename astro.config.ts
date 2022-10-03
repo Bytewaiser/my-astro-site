@@ -1,8 +1,9 @@
 import { defineConfig } from "astro/config";
-import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
 import image from "@astrojs/image";
 import sitemap from "@astrojs/sitemap";
+import remarkMath from 'remark-math';
+import rehypeMathJax from 'rehype-mathjax';
 
 export default defineConfig({
 	markdown: {
@@ -10,10 +11,12 @@ export default defineConfig({
 			theme: "dracula",
 			wrap: true,
 		},
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeMathJax],
+          extendDefaultPlugins: true,
 	},
-	site: "https://www.astro-theme-cactus.netlify.app",
+	site: "https://hasanhyurdagul.com",
 	integrations: [
-		mdx({}),
 		tailwind({
 			config: { applyBaseStyles: false },
 		}),

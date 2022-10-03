@@ -3,17 +3,17 @@ import PageLayout from "@/layouts/Base";
 import BlogPostPreview from "@/components/BlogPostPreview";
 import Pagination from "@/components/Paginator";
 import { getAllTags, sortMDByDate } from "src/util";
-import type { Post, Page, MDXInstance } from "@/types";
+import type { Post, Page, MarkdownInstance } from "@/types";
 
 export async function getStaticPaths({ paginate }) {
-	const allPosts = await Astro.glob<Post>("./*.mdx");
+	const allPosts = await Astro.glob<Post>("./*.md");
 	const allPostsByDate = sortMDByDate(allPosts);
 	const allTags = getAllTags(allPosts);
 	return paginate(allPostsByDate, { props: { allTags }, pageSize: 10 });
 }
 
 export interface Props {
-	page: Page<MDXInstance<Post>>;
+	page: Page<MarkdownInstance<Post>>;
 	allTags: string[];
 }
 

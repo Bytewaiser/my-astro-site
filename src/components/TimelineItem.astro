@@ -1,0 +1,17 @@
+---
+export interface Props {
+	time: string;
+	title: string;
+	position: string;
+	href: string;
+}
+
+const { time, title, position, href } = Astro.props as Props;
+---
+
+<li class="flex flex-wrap items-center gap-x-2 [&_q]:w-full">
+	<time class="min-w-[120px] text-gray-500">{time}</time>
+	<a href={href} target="_blank" class="inline-block cactus-link">{title}</a> - {
+		position
+	}
+</li>

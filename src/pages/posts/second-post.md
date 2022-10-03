@@ -6,6 +6,7 @@ description: It's another post by me.
 tags: ["example", "blog"]
 value: 128
 ---
+
 import { Code } from "astro/components";
 
 
@@ -21,6 +22,7 @@ function returnSeven() {
 	return x;
 }
 ```
+
 
 or 
 
