@@ -1,19 +1,17 @@
 ---
 import PageLayout from "@/layouts/Base";
-import { Image } from "@astrojs/image/components";
 import TimelineItem from "@/components/TimelineItem";
-import aboutImg from "../assets/Profile.jpg";
 
 const meta = {
 	title: "About",
-	description: "Hello I am Hasan Hüseyin Yurdagül aka Bytewaiser",
+	description: "I am Hasan Hüseyin Yurdagül aka Bytewaiser",
 };
 ---
 
 <PageLayout meta={meta}>
 	<div class="space-y-6">
 		<h1 class="title">About</h1>
-		<section aria-label="Blog post list" class="mt-16">
+		<section aria-label="Timeline list" class="mt-16">
 			<h2 class="mb-4 text-xl title">Timeline</h2>
 			<ul class="space-y-4 sm:space-y-2">
 				<TimelineItem

@@ -15,7 +15,7 @@ export default defineConfig({
           rehypePlugins: [rehypeMathJax],
           extendDefaultPlugins: true,
 	},
-	site: "https://hasanhyurdagul.com",
+	site: "https://hasanhuseyinyurdagul.com",
 	integrations: [
 		tailwind({
 			config: { applyBaseStyles: false },
